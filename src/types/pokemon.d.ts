@@ -9,23 +9,23 @@ interface PokemonSlotType {
 }
 
 interface Animated {
-  front_default: string;
+  front_default: string
 }
 
 interface GenerationV {
-  "black-white": BlackWhite;
+  "black-white": BlackWhite
 }
 
 interface Versions {
-  "generation-v": GenerationV;
+  "generation-v": GenerationV
 }
 
 interface BlackWhite {
-  animated: Animated;
+  animated: Animated
 }
 
 interface PokemonSprites {
-  front_default: string,
+  front_default: string
   versions: Versions
 }
 
@@ -38,3 +38,14 @@ type Pokemon = {
   sprites: PokemonSprites
   types: Array<PokemonSlotType>
 }
+
+type Pokemons = {
+  count: number
+  next: string | null
+  previous: string | null
+  results: Array<PokemonType>
+}
+
+type PokemonsResponse = Pokemons | undefined
+
+type PokemonResponse = Pokemon | undefined
