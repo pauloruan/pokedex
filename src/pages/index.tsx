@@ -1,14 +1,10 @@
-import { Roboto_Mono as Roboto } from "next/font/google"
-import Image from "next/image"
+import { HomeContent } from "@components/HomeContent"
+import { Layout } from "@components/Layout"
 
-const roboto = Roboto({ subsets: ["latin"], variable: "--font-roboto" })
-
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
-    <main
-      className={`bg-slate-200 flex min-h-screen flex-col items-center justify-between p-2 ${roboto.className}`}
-    >
-      <h1>Pokedex</h1>
-    </main>
+    <Layout>
+      <HomeContent />
+    </Layout>
   )
 }
